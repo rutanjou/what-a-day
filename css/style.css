@@ -1,3 +1,96 @@
-#setDay, #setYear {
-	border-color: #47b8e0
+#setDay, #setYear, #setMonth {
+	border:1px solid #47b8e0;
+	border-color: #47b8e0;
+	background:none;
+	color:#47b8e0;
 }
+
+select{
+	color:#47b8e0;
+	padding-top:0.3em;
+	padding-bottom: 0.3em;
+}
+
+option{
+	background-color:#34314c;
+}
+
+.content {
+	display:flex;
+	margin-top:25vh;
+}
+
+.input {
+	display:block;
+}
+
+.container {
+	margin-left:auto;
+	margin-right:auto;
+	width:30%;
+}
+
+button{
+	margin-left:14.8em;
+	margin-top:2em;
+	border:1px solid #47b8e0;
+	border-color: #47b8e0;
+	background:none;
+	padding:1em;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	color:#47b8e0;
+}
+
+body{
+	background-color: #34314c;
+	color:#47b8e0;
+	margin:0;
+	padding:0;
+}
+
+#setDay {
+	margin-right:1em;
+	padding-top:0.3em;
+	padding-bottom: 0.3em;
+}
+
+#setYear {
+	padding-top:0.3em;
+	padding-bottom: 0.3em;
+}
+
+.year {
+	margin-left:1em;
+}
+
+
+.error {
+	display:none;
+	width:100%;
+	height: 10vh;
+	background-color:#ff7473;
+	color:#fff;
+}
+
+.listError{
+	margin:0;
+	padding-left:2em;
+	padding-top:1em;
+}
+
+.overlay {
+	height:100vh;
+	width:100%;
+	background-color: #9055A2;
+	z-index:2;
+	position:absolute;
+	margin-top:-25vh;
+	padding:0;
+	display:none;
+}
+
+#return {
+	text-align:right;
+}
+
