@@ -13,7 +13,8 @@
 		},
 
 		listerners:function(){
-			$('#setSubmit').on('click',this.setValue.bind(this))
+			$('#setSubmit').on('click',this.setValue.bind(this));
+			$('#return').on('click',this.return.bind(this));
 		},
 
 		setValue:function(){
@@ -27,6 +28,7 @@
 			this.verifyYear();
 
 			this.verifyError();
+			this.transform();
 
 		},
 
@@ -47,12 +49,24 @@
 		},
 
 		verifyError:function(){
-			$('#message').html('');
+			$('.listError').html('');
 			if(this.errorsTab.length>0){
+				$('#message').css('display','block');
 				for(var i = 0; i<this.errorsTab.length; i++){
-					$('#message').append(this.errorsTab[i])
+					$('.listError').append('<li>'+this.errorsTab[i]+'</li>')
 				}
+				return;
 			}
+		},
+
+		transform:function(){
+			moment().locale('fr');
+			$('.overlay').css('display','block');
+			$('.overlay p').html(moment([this.setYear, this.setMonth, this.setDay]).format('dddd'));
+		},
+
+		return:function(){
+			$('.overlay').css('display','none');
 		}
 
 	}
